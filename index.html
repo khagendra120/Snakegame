@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <h1>🐍 Snake</h1>
+        <div class="controls">
+          <button id="startBtn" class="primary">Start</button>
+          <button id="pauseBtn">Pause</button>
+          <button id="restartBtn">Restart</button>
+          <button id="wrapBtn">Wrap: Off</button>
+        </div>
+      </header>
+      <div class="body">
+        <div class="board">
+          <canvas id="game" width="480" height="480" aria-label="Snake board" role="img"></canvas>
+          <div class="grid-overlay"></div>
+          <div class="overlay hidden" id="overlay">
+            <div class="panel">
+              <h2 id="stateTitle">Paused</h2>
+              <p id="stateSubtitle">Press <span class="kbd">Space</span> to resume</p>
+              <div style="margin-top:10px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+                <button id="resumeBtn" class="primary">Resume</button>
+                <button id="overlayRestart" class="danger">Restart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="sidebar">
+          <div class="stat"><strong>Score</strong><span id="score">0</span></div>
+          <div class="stat"><strong>High Score</strong><span id="high">0</span></div>
+          <div class="stat"><strong>Speed</strong><span id="speed">1x</span></div>
+          <div style="margin-top:12px">
+            <h3 style="margin:0 0 6px 0;font-size:14px;opacity:.9">Controls</h3>
+            <div style="display:grid;gap:6px;font-size:14px;opacity:.9">
+              <div><span class="kbd">← ↑ → ↓</span> or <span class="kbd">W A S D</span></div>
+              <div><span class="kbd">Space</span> / <span class="kbd">P</span> – Pause/Resume</div>
+              <div><span class="kbd">R</span> – Restart</div>
+              <div><span class="kbd">T</span> – Toggle Wrap walls</div>
+            </div>
+            <div class="touch" aria-label="Touch controls">
+              <button class="blank"></button>
+              <button id="upBtn" aria-label="Up">▲</button>
+              <button class="blank"></button>
+              <button id="leftBtn" aria-label="Left">◀</button>
+              <button class="blank"></button>
+              <button id="rightBtn" aria-label="Right">▶</button>
+              <button class="blank"></button>
+              <button id="downBtn" aria-label="Down">▼</button>
+              <button class="blank"></button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  
+
+</body>
+</html>
